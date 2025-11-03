@@ -1,6 +1,9 @@
 # Tokenization-Aware Compression Codec (tacc)
 
-Tokenization-Aware Compression Codec (tacc) encodes LLM output as mapped token IDs instead of UTF-8 bytes, using a precomputed mapping to zero-centre token frequencies so Thrift CompactProtocol compresses the integer sequence efficiently and then gzips the information dense byte stream, yielding much smaller payloads than gzip alone or brotli for chat completions—especially valuable in low-latency or bandwidth-limited scenarios. It currently supports cl100k_base, gpt2, o200k_base, o200k_harmony, p50k_base, p50k_edit, and r50k_base. This algorithm not only achieves superior compression ratios, but also provides a 20–25x speedup in end-to-end compression time due to the tacc pre-processing which vastly speeds up the subsequent gzip compression.
+Tokenization-Aware Compression Codec (tacc) encodes LLM output as mapped token IDs instead of UTF-8 bytes, using a precomputed mapping to zero-centre token frequencies so Thrift CompactProtocol compresses the integer sequence efficiently and then gzips the information dense byte stream, yielding much smaller payloads than gzip alone or brotli for chat completions—especially valuable in low-latency or bandwidth-limited scenarios. The effects of streaming are less useful for streaming text however for large tool call outputs, or large chat summarizations, this can be a significant improvement.
+
+
+It currently supports cl100k_base, gpt2, o200k_base, o200k_harmony, p50k_base, p50k_edit, and r50k_base. This algorithm not only achieves superior compression ratios, but also provides a 20–25x speedup in end-to-end compression time due to the tacc pre-processing which vastly speeds up the subsequent gzip compression.
 
 
 Try it out:
