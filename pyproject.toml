@@ -1,0 +1,22 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "tacc-encoder-rs"
+version = "0.1.0"
+description = "High-performance Rust implementation of tacc_encoder"
+requires-python = ">=3.9"
+authors = [{name = "Elijah Kurien"}]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.maturin]
+python-source = "python"
+module-name = "tacc._internal"
