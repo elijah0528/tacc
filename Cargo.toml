@@ -1,7 +1,13 @@
 [package]
-name = "tacc_encoder_rs"
+name = "tacc"
 version = "0.1.0"
 edition = "2021"
+authors = ["Elijah <elijah0528@users.noreply.github.com>"]
+description = "High-performance Rust implementation of token compression with Python bindings"
+repository = "https://github.com/elijah0528/tacc"
+license = "MIT"
+keywords = ["compression", "tokens", "llm", "thrift"]
+categories = ["compression", "encoding"]
 
 [lib]
 name = "tacc"

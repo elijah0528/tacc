@@ -3,19 +3,32 @@ requires = ["maturin>=1.0,<2.0"]
 build-backend = "maturin"
 
 [project]
-name = "tacc-encoder-rs"
+name = "tacc"
 version = "0.1.0"
-description = "High-performance Rust implementation of tacc_encoder"
+description = "High-performance token compression for LLMs with Rust-backed implementation"
+readme = "README.md"
 requires-python = ">=3.9"
+license = {text = "MIT"}
 authors = [{name = "Elijah Kurien"}]
+keywords = ["compression", "tokens", "llm", "thrift", "rust"]
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Archiving :: Compression",
 ]
+
+[project.urls]
+Homepage = "https://github.com/elijah0528/tacc"
+Repository = "https://github.com/elijah0528/tacc"
+Issues = "https://github.com/elijah0528/tacc/issues"
 
 [tool.maturin]
 python-source = "python"
